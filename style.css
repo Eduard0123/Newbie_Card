@@ -10,7 +10,28 @@
 }
 
 .section-background {
-  height: 100vh;
+  height: 654px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-background .section-work {
+  width: 1366px;
+  height: 654px;
   background-color: #19a2ae;
   position: relative;
   z-index: 0;
@@ -30,38 +51,48 @@
           align-items: center;
 }
 
-.section-background::before {
-  content: url("images/bg-pattern-top.svg");
+.section-background .section-work .circle-top {
   position: absolute;
-  bottom: 170px;
-  left: -320px;
+  bottom: 190px;
+  left: -330px;
 }
 
-.section-background::after {
-  content: url("images/bg-pattern-bottom.svg");
-  position: absolute;
-  top: 250px;
-  right: -250px;
-  z-index: -200;
+@media screen and (max-width: 375px) {
+  .section-background .section-work .circle-top {
+    left: -290px;
+  }
 }
 
-.section-background .main-principal {
+.section-background .section-work .circle-bottom {
+  position: absolute;
+  right: -280px;
+  top: 320px;
+}
+
+@media screen and (max-width: 375px) {
+  .section-background .section-work .circle-bottom {
+    top: 280px;
+    right: -250px;
+  }
+}
+
+.section-background .section-work .main-principal {
   position: relative;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 100px 0 #1c757d;
           box-shadow: 0 0 100px 0 #1c757d;
 }
 
-.section-background .main-principal .header {
+.section-background .section-work .main-principal .header {
   position: relative;
 }
 
-.section-background .main-principal .header .img-header {
+.section-background .section-work .main-principal .header .img-header {
   border-radius: 10px 10px 0 0;
   display: block;
 }
 
-.section-background .main-principal .main {
+.section-background .section-work .main-principal .main {
   position: relative;
   background-color: white;
   display: -webkit-box;
@@ -79,35 +110,35 @@
           flex-direction: column;
 }
 
-.section-background .main-principal .main .img-main {
+.section-background .section-work .main-principal .main .img-main {
   position: absolute;
   top: -50px;
   border-radius: 50%;
   border: 5px solid white;
 }
 
-.section-background .main-principal .main .description-main {
+.section-background .section-work .main-principal .main .description-main {
   margin-top: 70px;
   margin-bottom: 25px;
 }
 
-.section-background .main-principal .main .description-main span {
+.section-background .section-work .main-principal .main .description-main span {
   display: inline-block;
   padding: 10px 5px;
 }
 
-.section-background .main-principal .main .description-main :first-child {
+.section-background .section-work .main-principal .main .description-main :first-child {
   font-weight: 700;
   font-size: 1.1rem;
   color: #2d3248;
 }
 
-.section-background .main-principal .main .description-main :nth-child(2) {
+.section-background .section-work .main-principal .main .description-main :nth-child(2) {
   font-size: 1.1rem;
   color: #6a6f81;
 }
 
-.section-background .main-principal .main .description-main p {
+.section-background .section-work .main-principal .main .description-main p {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -115,7 +146,7 @@
   font-size: 0.9rem;
 }
 
-.section-background .main-principal .main hr {
+.section-background .section-work .main-principal .main hr {
   margin: 0;
   border: none;
   height: 1.8px;
@@ -126,7 +157,7 @@
       align-self: stretch;
 }
 
-.section-background .main-principal .footer {
+.section-background .section-work .main-principal .footer {
   position: relative;
   background-color: white;
   border-radius: 0 0 10px 10px;
@@ -142,7 +173,7 @@
   padding: 30px 60px;
 }
 
-.section-background .main-principal .footer .box {
+.section-background .section-work .main-principal .footer .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +192,7 @@
   margin-bottom: 15px;
 }
 
-.section-background .main-principal .footer .box span {
+.section-background .section-work .main-principal .footer .box span {
   font-size: .65rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -170,7 +201,7 @@
   top: 25px;
 }
 
-.section-background .main-principal .footer .box:nth-child(2) {
+.section-background .section-work .main-principal .footer .box:nth-child(2) {
   margin: 0 55px 15px;
 }
 /*# sourceMappingURL=style.css.map */
